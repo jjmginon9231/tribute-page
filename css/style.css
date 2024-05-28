@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+/* || RESET */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES */
+
+:root {
+    /* FONTS */
+    --FF: "Playfair", serif;
+    --FF-HEADINGS: "Playfair Display SC", serif;
+    --FS: clamp(1.25rem, 2.2vh, 1.75rem);
+
+    /* COLOR */
+    --BGCOLOR-FADE: #D69F7E;
+    --BGCOLOR: #8A5A44;
+    --BGIMAGE: linear-gradient(to top, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --BODY-BGCOLOR: #fafafa;
+    --CONTAINER-BGCOLOR: #D9DDDC;
+    --BORDER-COLOR: #333;
+    --FONT-COLOR: #202124;
+    --HIGHLIGHT-COLOR: #774936;
+    --LINK-ACTIVE: rgb(143, 110, 48);
+    --LINK-COLOR: #202124;
+    --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+
+    /* BORDERS */
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+    --BORDER-RADIUS: 8px;
+
+    /* STANDARD PADDING */
+    --PADDING-TB: 2.5em;
+    --PADDING-SIDE: 5%;
+
+    /* STANDARD MARGIN */
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+/* || UTILITY CLASSES */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.container {
+    background-color: var(--CONTAINER-BGCOLOR);
+    line-height: 1.5;
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    border-radius: var(--BORDER-RADIUS);
+    margin: var(--MARGIN);
+}
+
+/* || GENERAL STYLES */
+
+html {
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
+}
+
+body {
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+
+h1 {
+    font-family: var(--FF-HEADINGS);
+}
+
+h2 {
+    margin-bottom: 1em;
+    color: var(--HIGHLIGHT-COLOR);
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+figcaption {
+    padding-top: 0.5em;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+a:any-link {
+    color: var(--LINK-COLOR);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+/* || MAIN */
+
+.main {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.main__h1 {
+    color: var(--HIGHLIGHT-COLOR);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main__p {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.main__p--padding {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    margin: var(--MARGIN);
+    line-height: 1.5;
+}
+
+.main__figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 6.5rem;
+    margin: var(--MARGIN);
+    font-style: italic;
+}
+
+.main__img {
+    width: 40%;
+    height: auto;
+}
+
+.main__blockquote {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 5em;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.main__p--margin {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.5;
+    margin: var(--MARGIN);
+}
+
+/* || MEDIA QUERY */
+
+/* SMALL DEVICES (PORTRAIT PHONES, LESS THAN 576px) */
+@media screen and (max-width: 575.98px) {
+
+    ul,
+    ol {
+        list-style-type: none;
+    }
+}
+
+/* SMALL DEVICES (LANDSCAPE PHONES, LESS THAN 768px) */
+@media screen and (max-width: 767.98px) {
+
+    ul,
+    ol {
+        list-style-type: none;
+    }
+}
+
+/* MEDIUM DEVICES (TABLETS, LESS THAN 992px) */
+@media screen and (max-width: 991.98px) {
+
+    ul,
+    ol {
+        list-style-type: none;
+    }
+}
